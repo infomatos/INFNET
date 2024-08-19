@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lpmaia\\Downloads\\Noite\\Delegate-Noite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64280EE4-2298-4973-AEF0-FCF23AAB1D5A}|Event1\\Event1.csproj|c:\\users\\lpmaia\\downloads\\noite\\delegate-noite\\event1\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64280EE4-2298-4973-AEF0-FCF23AAB1D5A}|Event1\\Event1.csproj|solutionrelative:event1\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64280EE4-2298-4973-AEF0-FCF23AAB1D5A}|Event1\\Event1.csproj|c:\\users\\lpmaia\\downloads\\noite\\delegate-noite\\event1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64280EE4-2298-4973-AEF0-FCF23AAB1D5A}|Event1\\Event1.csproj|solutionrelative:event1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lpmaia\\Downloads\\Noite\\Delegate-Noite\\Event1\\Program.cs",
+              "RelativeDocumentMoniker": "Event1\\Program.cs",
+              "ToolTip": "C:\\Users\\lpmaia\\Downloads\\Noite\\Delegate-Noite\\Event1\\Program.cs",
+              "RelativeToolTip": "Event1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T00:14:55.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Conta.cs",
+              "DocumentMoniker": "C:\\Users\\lpmaia\\Downloads\\Noite\\Delegate-Noite\\Event1\\Conta.cs",
+              "RelativeDocumentMoniker": "Event1\\Conta.cs",
+              "ToolTip": "C:\\Users\\lpmaia\\Downloads\\Noite\\Delegate-Noite\\Event1\\Conta.cs",
+              "RelativeToolTip": "Event1\\Conta.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAwwBsAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T00:14:31.415Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

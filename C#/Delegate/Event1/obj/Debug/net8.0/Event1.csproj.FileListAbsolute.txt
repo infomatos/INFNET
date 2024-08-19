@@ -1,0 +1,14 @@
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\bin\Debug\net8.0\Event1.exe
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\bin\Debug\net8.0\Event1.deps.json
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\bin\Debug\net8.0\Event1.runtimeconfig.json
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\bin\Debug\net8.0\Event1.dll
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\bin\Debug\net8.0\Event1.pdb
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\obj\Debug\net8.0\Event1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\obj\Debug\net8.0\Event1.AssemblyInfoInputs.cache
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\obj\Debug\net8.0\Event1.AssemblyInfo.cs
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\obj\Debug\net8.0\Event1.csproj.CoreCompileInputs.cache
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\obj\Debug\net8.0\Event1.dll
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\obj\Debug\net8.0\refint\Event1.dll
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\obj\Debug\net8.0\Event1.pdb
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\obj\Debug\net8.0\Event1.genruntimeconfig.cache
+C:\Users\lpmaia\Downloads\Noite\Delegate-Noite\Event1\obj\Debug\net8.0\ref\Event1.dll

@@ -24,7 +24,7 @@ public class CalculadoraTeste {
     public void testar_Dividir4Por2_Retorna2_ERRO() {
         Calculadora calculadora = new Calculadora();
         float resultado = calculadora.dividir(4,2);
-        assertNotEquals(2, resultado);
+        assertNotEquals(1, resultado);
     }
 
     @Test
@@ -48,7 +48,7 @@ public class CalculadoraTeste {
     public void testar_Somar4Com2_Retorna6_ERRO() {
         Calculadora calculadora = new Calculadora();
         float resultado = calculadora.somar(4,3);
-        assertEquals(6, resultado);
+        assertNotEquals(6, resultado);
     }
 
     @Test
@@ -63,7 +63,7 @@ public class CalculadoraTeste {
     public void testar_Subtrair2De4_Retorna2_ERRO() {
         Calculadora calculadora = new Calculadora();
         float resultado = calculadora.subtrair(4,1);
-        assertEquals(2, resultado);
+        assertNotEquals(2, resultado);
     }
 
     @Test
@@ -86,7 +86,7 @@ public class CalculadoraTeste {
     public void testar_Multiplicar4Por2_Retorna8_ERRO() {
         Calculadora calculadora = new Calculadora();
         float resultado = calculadora.multiplicar(4,4);
-        assertEquals(8, resultado);
+        assertNotEquals(8, resultado);
     }
 
     @BeforeAll

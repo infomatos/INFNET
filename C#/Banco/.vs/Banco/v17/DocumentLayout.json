@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\INFNET\\C#\\Banco\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF121AC1-0927-4A40-96B2-E7B06AE4465A}|Banco\\Banco.csproj|c:\\infnet\\c#\\banco\\banco\\models\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF121AC1-0927-4A40-96B2-E7B06AE4465A}|Banco\\Banco.csproj|solutionrelative:banco\\models\\conta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF121AC1-0927-4A40-96B2-E7B06AE4465A}|Banco\\Banco.csproj|c:\\infnet\\c#\\banco\\banco\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF121AC1-0927-4A40-96B2-E7B06AE4465A}|Banco\\Banco.csproj|solutionrelative:banco\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF121AC1-0927-4A40-96B2-E7B06AE4465A}|Banco\\Banco.csproj|c:\\infnet\\c#\\banco\\banco\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF121AC1-0927-4A40-96B2-E7B06AE4465A}|Banco\\Banco.csproj|solutionrelative:banco\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Banco/True/SqlTable/dbo.Contas.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF121AC1-0927-4A40-96B2-E7B06AE4465A}|Banco\\Banco.csproj|c:\\infnet\\c#\\banco\\banco\\crudbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF121AC1-0927-4A40-96B2-E7B06AE4465A}|Banco\\Banco.csproj|solutionrelative:banco\\crudbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF121AC1-0927-4A40-96B2-E7B06AE4465A}|Banco\\Banco.csproj|c:\\infnet\\c#\\banco\\banco\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF121AC1-0927-4A40-96B2-E7B06AE4465A}|Banco\\Banco.csproj|solutionrelative:banco\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbo.Contas [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Banco/True/SqlTable/dbo.Contas.sql",
+              "ToolTip": "dbo.Contas [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-08-01T00:16:28.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Crud.cs",
+              "DocumentMoniker": "C:\\INFNET\\C#\\Banco\\Banco\\Crud.cs",
+              "RelativeDocumentMoniker": "Banco\\Crud.cs",
+              "ToolTip": "C:\\INFNET\\C#\\Banco\\Banco\\Crud.cs",
+              "RelativeToolTip": "Banco\\Crud.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T00:52:11.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Utils.cs",
+              "DocumentMoniker": "C:\\INFNET\\C#\\Banco\\Banco\\Utils.cs",
+              "RelativeDocumentMoniker": "Banco\\Utils.cs",
+              "ToolTip": "C:\\INFNET\\C#\\Banco\\Banco\\Utils.cs",
+              "RelativeToolTip": "Banco\\Utils.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T00:38:47.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CrudBd.cs",
+              "DocumentMoniker": "C:\\INFNET\\C#\\Banco\\Banco\\CrudBd.cs",
+              "RelativeDocumentMoniker": "Banco\\CrudBd.cs",
+              "ToolTip": "C:\\INFNET\\C#\\Banco\\Banco\\CrudBd.cs",
+              "RelativeToolTip": "Banco\\CrudBd.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowA4AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T00:26:58.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Conta.cs",
+              "DocumentMoniker": "C:\\INFNET\\C#\\Banco\\Banco\\Models\\Conta.cs",
+              "RelativeDocumentMoniker": "Banco\\Models\\Conta.cs",
+              "ToolTip": "C:\\INFNET\\C#\\Banco\\Banco\\Models\\Conta.cs",
+              "RelativeToolTip": "Banco\\Models\\Conta.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAUwBUAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T23:55:29.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\INFNET\\C#\\Banco\\Banco\\Program.cs",
+              "RelativeDocumentMoniker": "Banco\\Program.cs",
+              "ToolTip": "C:\\INFNET\\C#\\Banco\\Banco\\Program.cs",
+              "RelativeToolTip": "Banco\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T23:45:53.937Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
