@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Infomatos\\Documents\\C#\\TPs\\EmpresaMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A01B495C-2E8B-4DA2-9C2B-F64998FA2F92}|EmpresaMVC\\EmpresaMVC.csproj|c:\\users\\infomatos\\documents\\c#\\tps\\empresamvc\\empresamvc\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A01B495C-2E8B-4DA2-9C2B-F64998FA2F92}|EmpresaMVC\\EmpresaMVC.csproj|solutionrelative:empresamvc\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A01B495C-2E8B-4DA2-9C2B-F64998FA2F92}|EmpresaMVC\\EmpresaMVC.csproj|c:\\users\\infomatos\\documents\\c#\\tps\\empresamvc\\empresamvc\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A01B495C-2E8B-4DA2-9C2B-F64998FA2F92}|EmpresaMVC\\EmpresaMVC.csproj|solutionrelative:empresamvc\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\Infomatos\\Documents\\C#\\TPs\\EmpresaMVC\\EmpresaMVC\\Models\\Produto.cs",
+              "RelativeDocumentMoniker": "EmpresaMVC\\Models\\Produto.cs",
+              "ToolTip": "C:\\Users\\Infomatos\\Documents\\C#\\TPs\\EmpresaMVC\\EmpresaMVC\\Models\\Produto.cs",
+              "RelativeToolTip": "EmpresaMVC\\Models\\Produto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T14:48:08.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Infomatos\\Documents\\C#\\TPs\\EmpresaMVC\\EmpresaMVC\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "EmpresaMVC\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Infomatos\\Documents\\C#\\TPs\\EmpresaMVC\\EmpresaMVC\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "EmpresaMVC\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAE0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-28T21:21:30.605Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

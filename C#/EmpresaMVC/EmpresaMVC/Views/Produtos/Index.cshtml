@@ -1,0 +1,67 @@
+﻿@model IEnumerable<EmpresaMVC.Models.Produto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Produtos
+
+</h2>
+
+@if (User.IsInRole("Gerente"))
+{
+    <p align="right">
+        <a asp-action="Create"><strong>Novo produto</strong></a>
+    </p>
+}
+
+<form asp-action="Index">
+    <p>
+        Nome do produto: <input type="text" name="searchString" />
+        <input type="submit" value="Buscar" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                    @if (User.IsInRole("Gerente"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>@Html.Raw(" | ")
+                        <a asp-action="Details" asp-route-id="@item.Id"> Detalhes </a>@Html.Raw(" | ")
+                        <a asp-action= "Delete" asp-route-id= "@item.Id"> Deletar </a>
+                    }
+                    else
+                    {
+                        <a asp-action= "Details" asp-route-id= "@item.Id"> Detalhes </a>
+                    }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
