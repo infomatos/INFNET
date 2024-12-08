@@ -1,7 +1,12 @@
 from tarefas import adicionar_tarefa, listar_tarefas, marcar_concluida, remover_tarefa
 
 def menu():
+    """
+    Exibe o menu de opções e executa as operações conforme escolha do usuário.
     
+    Retorno:
+    Nenhum.
+    """
     while True:
         print("\n1. Adicionar Tarefa")
         print("2. Listar Tarefas Pendentes")
@@ -13,7 +18,7 @@ def menu():
         
         if escolha == '1':
             descricao = input("Descrição da Tarefa: ")
-            prazo = input("Prazo (AAAA-MM-DD): ")
+            prazo = input("Prazo: ")
             urgencia = input("Urgência (Alta, Média, Baixa): ")
             adicionar_tarefa(descricao, prazo, urgencia)
         
@@ -40,6 +45,4 @@ def menu():
         else:
             print("Opção inválida, tente novamente.")
 
-# Executa o programa
-if __name__ == "__main__":
-    menu()
+menu()
