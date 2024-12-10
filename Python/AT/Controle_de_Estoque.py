@@ -18,10 +18,65 @@ def carregar_estoque(estoque_str):
 
 # =======Funções principais========
 
-def cadastrar_produto(produtos, descricao, codigo, quantidade, custo, preco_venda):
-    if any(produto["codigo"] == codigo for produto in produtos):
-        print("Código já existente!")
-        return
+def cadastrar_produto(produtos):
+    """
+    Cadastra um novo produto no sistema, garantindo que o código seja único e os valores sejam válidos.
+    """
+    descricao = input("Descrição: ")
+    while not descricao:
+        print("Erro: A descrição não pode estar vazia.")
+        descricao = input("Descrição: ")
+    
+    while True:
+        codigo = input("Código: ")
+        while not codigo:
+            print("Erro: O código precisa ser defindo.")
+            codigo = input("Código: ")
+        while not codigo.isdigit():
+            print("Erro: O código deve ser um número inteiro válido.")
+            codigo = input("Código: ")
+        codigo = int(codigo)
+        if any(produto["codigo"] == codigo for produto in produtos):
+            print("Erro: Código já existente! Tente novamente.")
+        else:
+            break
+
+    while True:
+        quantidade = input("Quantidade de unidades: ")
+        while not quantidade:
+            print("Erro: Voce precisa definir uma quantidade inicial.")
+            quantidade = input("Quantidade de unidades: ")
+        while not quantidade.isdigit():
+            print("Erro: O código deve ser um número inteiro válido e positivo.")
+            quantidade = input("Quantidade de unidades: ")
+        quantidade = int(quantidade)
+        break
+    
+    while True:
+        custo = input("Custo unitário: ")
+        while not custo:
+            print("Erro: Voce precisa definir o custo do produto.")
+            custo = input("Custo unitário: ")
+        if not custo.replace('.', '', 1).isdigit():
+            print("Erro: O custo deve ser um número válido e positivo.")
+            continue
+        custo = float(custo)
+        break
+    
+    while True:
+        preco_venda = input("Preço de venda: ")
+        while not preco_venda:
+            print("Erro: Voce precisa definir um preço de venda.")
+            preco_venda = input("Preço de venda: ")
+        if not preco_venda.replace('.', '', 1).isdigit():
+            print("Erro: O preço de venda deve ser um número válido.")
+            continue
+        preco_venda = float(preco_venda)
+        if preco_venda < custo:
+            print("Erro: O preço de venda não pode ser menor que o custo.")
+        else:
+            break
+    
     produtos.append({
         "descricao": descricao,
         "codigo": codigo,
@@ -86,19 +141,43 @@ def consultar_produtos_esgotados(produtos):
     """
     Exibe todos os produtos com quantidade igual a zero (esgotados).
     """
-    produtos_esgotados = [produto for produto in produtos if produto["quantidade"] == 0]
+    produtos_esgotados = [produto for produto in produtos if produto["quantidade"] <= 0]
 
     if not produtos_esgotados:
         print("Não há produtos esgotados no momento.")
     else:
-        print("Produtos esgotados:")
-        print("Descrição".ljust(30), "Código".ljust(10), "Custo".ljust(10), "Preço Venda")
+        print("\nProdutos esgotados:")
+        print("Código".ljust(10), "Descrição".ljust(13), "Quantidade".ljust(12))
         for produto in produtos_esgotados:
+            print(str(produto["codigo"]).ljust(10),
+                  produto["descricao"].ljust(13),
+                  produto["quantidade".ljust(10)],)
+                  #f"{produto['custo']:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".").ljust(10),
+                  #f"{produto['preco_venda']:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
+
+def filtrar_produtos_abaixo_minimo(produtos, limite_minimo=10):
+    """
+    Filtra e exibe produtos com quantidade abaixo de um limite mínimo.
+    Caso o limite não seja fornecido, utiliza o valor padrão de 10.
+    
+    Parâmetros:
+        produtos (list): Lista de produtos.
+        limite_minimo (int): Quantidade mínima para o filtro (opcional, padrão=10).
+    """
+    produtos_filtrados = [produto for produto in produtos if produto["quantidade"] < limite_minimo]
+
+    if not produtos_filtrados:
+        print(f"\nNão há produtos com quantidade abaixo de {limite_minimo}.")
+    else:
+        print(f"\nProdutos com quantidade abaixo de {limite_minimo}:")
+        print("\nDescrição".ljust(30), "Código".ljust(10), "Quantidade".ljust(10), "Custo".ljust(10), "Preço Venda")
+        for produto in produtos_filtrados:
             print(produto["descricao"].ljust(30),
                   str(produto["codigo"]).ljust(10),
+                  str(produto["quantidade"]).ljust(10),
                   f"{produto['custo']:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".").ljust(10),
                   f"{produto['preco_venda']:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
-            
+
 def remover_produto(produtos, codigo):
     for produto in produtos:
         if produto["codigo"] == codigo:
@@ -108,32 +187,49 @@ def remover_produto(produtos, codigo):
     print("Produto não encontrado!")
 
 def atualizar_estoque(produtos, codigo, quantidade):
+    """
+    Atualiza a quantidade de um produto específico no estoque.
+    Não permite que o estoque fique negativo.
+    
+    Parâmetros:
+        produtos (list): Lista de produtos.
+        codigo (int): Código do produto a ser atualizado.
+        quantidade (int): Quantidade a ser adicionada (positiva) ou removida (negativa).
+    """
     for produto in produtos:
         if produto["codigo"] == codigo:
-            if produto["quantidade"] + quantidade < 0:
-                print("Quantidade insuficiente no estoque!")
+            nova_quantidade = produto["quantidade"] + quantidade
+            if nova_quantidade < 0:
+                print(f"Erro: Estoque insuficiente para o produto '{produto['descricao']}'.")
+                print(f"Quantidade atual: {produto['quantidade']}, tentativa de ajuste: {quantidade}.")
                 return
-            produto["quantidade"] += quantidade
-            print("Estoque atualizado com sucesso!")
+            produto["quantidade"] = nova_quantidade
+            print(f"Estoque atualizado com sucesso! Novo estoque de '{produto['descricao']}': {produto['quantidade']}")
             return
-    print("Produto não encontrado!")
+    
+    print(f"Produto com código {codigo} não encontrado.")
 
 def atualizar_preco(produtos, codigo, novo_preco):
+    """"Atualiza o preço individual de cada produto"""
     for produto in produtos:
         if produto["codigo"] == codigo:
-            if novo_preco < produto["custo"]:
-                print("O preço de venda não pode ser menor que o custo!")
-                return
+            while novo_preco < produto["custo"]:
+                print("O preço de venda não pode ser menor que o preço de custo ", f"R$ {produto["custo"]:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
+                novo_preco = float(input("Novo preço de venda: "))
             produto["preco_venda"] = novo_preco
             print("Preço atualizado com sucesso!")
             return
     print("Produto não encontrado!")
 
 def calcular_valor_total_estoque(produtos):
-    return sum(produto["quantidade"] * produto["preco_venda"] for produto in produtos)
+    print("\nValor total do estoque:")
+    estoque_total = sum(produto["quantidade"] * produto["preco_venda"] for produto in produtos)
+    return estoque_total
 
 def calcular_lucro_presumido(produtos):
-    return sum((produto["preco_venda"] - produto["custo"]) * produto["quantidade"] for produto in produtos)
+    print("\nLucro presumido do estoque atual com base no preço de custo:")
+    lucro_presumido = sum((produto["preco_venda"] - produto["custo"]) * produto["quantidade"] for produto in produtos)
+    return lucro_presumido
 
 def exibir_relatorio_estoque(produtos):
     """
@@ -177,34 +273,41 @@ def exibir_relatorio_estoque(produtos):
 def menu():
     while True:
         print("\n---===Menu===---")
-        print("\n1. Listar produtos\n2. Listagem ordenada (por quantidade)\n3. Cadastrar produto\n4. Buscar produto\n5.Fericar estoques zerados\n6. Atualizar estoque\n7. Atualizar preço\n8. Remover produto\n9. Exibir relatório\n10. Sair")
+        print("\n1.  Listar produtos\n2.  Listagem ordenada (por quantidade)\n3.  Cadastrar produto\n4.  Buscar produto\n5.  Remover produto\n6.  Verificar estoques zerados\n7.  Checar níveis de estoque\n8.  Atualizar estoque\n9.  Atualizar preço\n10. Valor total do estoque\n11. Lucro presumido\n12. Exibir inventário total\n13. Sair")
         print(" ")
         opcao = input("Escolha uma opção: ")
-        if opcao == "1":
+        if opcao == "1":    #listagem geral
             listar_produtos(produtos)
-        elif opcao == "2":
+        elif opcao == "2":  #listagem ordenada por quantidade
             ordem = input("Ordenar por quantidade: 'asc' para crescente, 'desc' para decrescente: ").strip().lower()
             listar_produtos(produtos, ordem)
-        elif opcao == "3":
-            descricao = input("Descrição: ")
-            codigo = int(input("Código: "))
-            quantidade = int(input("Quantidade: "))
-            custo = float(input("Custo: "))
-            preco_venda = float(input("Preço de venda: "))
-            cadastrar_produto(produtos, descricao, codigo, quantidade, custo, preco_venda)
-        elif opcao == "4":
+        elif opcao == "3":  #inserir um produto novo
+            cadastrar_produto(produtos)
+        elif opcao == "4":  #buscar produtos por desc ou id
             buscar_produto(produtos, descricao=input("Descrição (ou pressione Enter para ignorar): "), codigo=int(input("Código (ou pressione 0 para ignorar): ")))
-        elif opcao == "5":
-            consultar_produtos_esgotados()
-        elif opcao == "5":
-            atualizar_estoque(produtos, int(input("Código: ")), int(input("Quantidade (negativo para saída): ")))
-        elif opcao == "6":
-            atualizar_preco(produtos, int(input("Código: ")), float(input("Novo preço de venda: ")))
-        elif opcao == "7":
+        elif opcao == "5":  #remover produto
             remover_produto(produtos, int(input("Código: ")))
-        elif opcao == "8":
+        elif opcao == "6":  #consultar estoques zerados
+            consultar_produtos_esgotados(produtos)
+        elif opcao == "7":  #filtrar produtos por nível de estoque
+            resp = input("Deseja inserir um limite (padrão 10)? (s/n)")
+            if resp == "s":
+                limite_minimo = int(input("Quantidade mínima: "))
+                filtrar_produtos_abaixo_minimo(produtos, limite_minimo)
+            else:  
+            #limite_minimo = int(input("Quantidade mínima (opcional. Padrão é 10): "))
+                filtrar_produtos_abaixo_minimo(produtos)
+        elif opcao == "8":  #alterar estoque de um produto
+            atualizar_estoque(produtos, int(input("Código: ")), int(input("Quantidade (negativo para saída): ")))
+        elif opcao == "9":  #atualizar preço
+            atualizar_preco(produtos, int(input("Código: ")), float(input("Novo preço de venda: ")))
+        elif opcao == "10": #valor total do estoque
+            print(f"R$ {calcular_valor_total_estoque(produtos):,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
+        elif opcao == "11": #calcular lucro presumido
+            print(f"R$ {calcular_lucro_presumido(produtos):,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
+        elif opcao == "12": #relatório de estoque
             exibir_relatorio_estoque(produtos)
-        elif opcao == "9":
+        elif opcao == "13": #sair
             print("Saindo do sistema...")
             break
         else:
@@ -212,5 +315,4 @@ def menu():
 
 # Execução inicial
 produtos = carregar_estoque(estoque_inicial)
-
 menu()
