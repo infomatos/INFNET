@@ -1,0 +1,156 @@
+[
+    {
+        "id":1,
+        "title":"Breaking Bad",
+        "year":"2008",
+        "seasons":5,
+        "episodes":62
+    },
+    {
+        "id":2,
+        "title":"Game of Thrones",
+        "year":"2011",
+        "seasons":8,
+        "episodes":73
+    },
+    {
+        "id":3,
+        "title":"Breaking Bad",
+        "year":"2008",
+        "seasons":5,
+        "episodes":62
+    },
+    {
+        "id":4,
+        "title":"Game of Thrones",
+        "year":"2011",
+        "seasons":8,
+        "episodes":73
+    },
+    {
+        "id":5,
+        "title":"Smallville",
+        "year":"2001",
+        "seasons":10,
+        "episodes":237
+    },
+    {
+        "id":6,
+        "title":"Game of Thrones",
+        "year":"2011",
+        "seasons":8,
+        "episodes":73
+    },
+    {
+        "id":7,
+        "title":"Smallville",
+        "year":"2001",
+        "seasons":10,
+        "episodes":237
+    },
+    {
+        "id":8,
+        "title":"Game of Thrones",
+        "year":"2011",
+        "seasons":8,
+        "episodes":73
+    },
+    {
+        "id":9,
+        "title":"Smallville",
+        "year":"2001",
+        "seasons":10,
+        "episodes":234
+    },
+    {
+        "id":10,
+        "title":"Stranger Things",
+        "year":"2016",
+        "seasons":4,
+        "episodes":34
+    },
+    {
+        "id":11,
+        "title":"Smallville",
+        "year":"2001",
+        "seasons":10,
+        "episodes":234
+    },
+    {
+        "id":12,
+        "title":"Stranger Things",
+        "year":"2016",
+        "seasons":4,
+        "episodes":34
+    },
+    {
+        "id":13,
+        "title":"Smallville",
+        "year":"2001",
+        "seasons":10,
+        "episodes":234
+    },
+    {
+        "id":14,
+        "title":"Stranger Things",
+        "year":"2016",
+        "seasons":4,
+        "episodes":34
+    },
+    {
+        "id":15,
+        "title":"Smallville",
+        "year":"2001",
+        "seasons":10,
+        "episodes":234
+    },
+    {
+        "id":16,
+        "title":"Stranger Things",
+        "year":"2016",
+        "seasons":4,
+        "episodes":34
+    },
+    {
+        "id":17,
+        "title":"Smallville",
+        "year":"2001",
+        "seasons":10,
+        "episodes":234
+    },
+    {
+        "id":18,
+        "title":"Stranger Things",
+        "year":"2016",
+        "seasons":4,
+        "episodes":34
+    },
+    {
+        "id":19,
+        "title":"Smallville",
+        "year":"2001",
+        "seasons":10,
+        "episodes":234
+    },
+    {
+        "id":20,
+        "title":"Stranger Things",
+        "year":"2016",
+        "seasons":4,
+        "episodes":34
+    },
+    {
+        "id":21,
+        "title":"Smallville",
+        "year":"2001",
+        "seasons":10,
+        "episodes":234
+    },
+    {
+        "id":22,
+        "title":"Stranger Things",
+        "year":"2016",
+        "seasons":4,
+        "episodes":34
+    }
+]

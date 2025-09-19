@@ -1,3 +1,0 @@
-Olá mundo
-Python é incrível
-Olá Python

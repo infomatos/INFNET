@@ -1,6 +1,0 @@
-Alice
-Bob
-Alice
-Carol
-Bob
-David
