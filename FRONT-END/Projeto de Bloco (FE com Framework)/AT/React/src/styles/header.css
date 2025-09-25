@@ -1,0 +1,400 @@
+:root {
+  --bg-header: #fff;
+  --text: #1f2937;
+  --primary: #1e66ff;
+  --primary-10: rgba(30, 102, 255, 0.1);
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* container */
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 3000; /* ↑ header acima do backdrop */
+  background: var(--bg-header);
+  transition: background 0.2s, box-shadow 0.2s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.header-container.scrolled {
+  box-shadow: var(--shadow);
+  backdrop-filter: saturate(180%) blur(8px);
+  background: rgba(255, 255, 255, 0.9);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.logo img {
+  height: 40px;
+  display: block;
+}
+
+/* nav desktop */
+.nav ul {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+.nav a:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.nav a.active {
+  color: var(--primary);
+  background: var(--primary-10);
+}
+
+/* Botões */
+.button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.5rem 0.9rem;
+  font-weight: 700;
+  background: var(--primary);
+  color: #fff;
+}
+.button:hover {
+  opacity: 0.92;
+}
+.button-outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+  background: transparent;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.hamburger .bar {
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+.hamburger.is-active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== Config — ajuste aqui ===== */
+:root {
+  --drawer-vw: 75vw; /* 75% da tela para o menu */
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    z-index: 3200;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: var(--drawer-w, min(85vw, 360px));
+    background: var(--bg-header);
+    transform: translateX(100%); /* escondido à direita */
+    transition: transform 0.25s ease;
+    box-shadow: -8px 0 20px rgba(0, 0, 0, 0.12);
+    padding-top: 72px;
+    z-index: 3100; /* acima do backdrop */
+    height: 100dvh; /* fallback */
+    height: 100svh; /* viewport “segura” iOS */
+    overflow-y: auto; /* menu rola se ficar alto */
+    overscroll-behavior: contain;
+  }
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0 1rem 1.25rem;
+  }
+
+  /* Alinha os itens à direita sem “estourar” hover */
+  .nav li {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav a {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    text-align: right;
+    padding: 0.45rem 0.75rem;
+    border-radius: 0.75rem;
+    line-height: 1.25;
+  }
+
+  /* Backdrop ocupando apenas a área fora do drawer (ajuste fácil por largura) */
+  .menu-backdrop {
+    position: fixed;
+    inset: 0;
+    right: var(--drawer-w, min(85vw, 360px)); /* <- mesma largura do menu */
+    background: rgba(15, 23, 42, 0.5);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 2900; /* abaixo do nav/header */
+  }
+  .menu-backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* Backdrop (abaixo do header/nav, acima do conteúdo) */
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5); /* escurece mais */
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px); /* leve desfoque */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 2900; /* abaixo do nav/header */
+}
+.menu-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== Modal de Login ===== */
+:root {
+  --radius: 14px;
+  --space: 16px;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  --border: 1px solid rgba(255, 255, 255, 0.08);
+  --accent: #2563eb; /* azul elegante */
+  --danger: #ef4444;
+}
+
+/* Fundo escurecido + desfoque */
+.login-form-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.55);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 180ms ease-out;
+}
+
+/* Card do modal */
+.login-form {
+  width: 100%;
+  max-width: 420px;
+  background: #0b1220; /* dark default */
+  color: #e5e7eb;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: var(--border);
+  padding: 24px;
+  animation: popUp 200ms ease-out;
+}
+
+/* Título */
+.login-form h2 {
+  margin: 0 0 14px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Layout básico dos campos */
+.login-form label {
+  display: block;
+  margin: 12px 0;
+}
+
+.login-form input {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: #0f172a; /* fundo do input (dark) */
+  color: #e5e7eb;
+  padding: 0 12px;
+  outline: none;
+  transition: border-color 120ms ease, box-shadow 120ms ease,
+    background 120ms ease;
+}
+
+.login-form input::placeholder {
+  color: #94a3b8;
+}
+
+.login-form input:focus {
+  border-color: rgba(37, 99, 235, 0.6);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* Mensagem de erro */
+.login-form .error {
+  margin: 8px 0 0;
+  padding: 10px 12px;
+  border-left: 4px solid var(--danger);
+  background: rgba(239, 68, 68, 0.1);
+  color: #fecaca;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+/* Ações (botões) */
+.login-form .buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.login-form .button {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 120ms ease, background 120ms ease,
+    color 120ms ease, border-color 120ms ease;
+  user-select: none;
+}
+
+/* Variante outline */
+.login-form .button.button-outline {
+  background: transparent;
+  color: #e5e7eb;
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+.login-form .button.button-outline:hover {
+  border-color: rgba(148, 163, 184, 0.6);
+  transform: translateY(-1px);
+}
+
+/* Destacar botao Entrar deixar apenas "button" sem "button-outline" */
+.login-form .button:not(.button-outline) {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.24);
+}
+.login-form .button:not(.button-outline):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.28);
+}
+
+/* Estados desabilitado */
+.login-form .button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsivo leve */
+@media (max-width: 420px) {
+  .login-form {
+    padding: 20px;
+  }
+  .login-form h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Suporte a tema claro automático */
+@media (prefers-color-scheme: light) {
+  .login-form {
+    background: #ffffff;
+    color: #0f172a;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+  }
+  .login-form input {
+    background: #ffffff;
+    color: #0f172a;
+    border: 1px solid rgba(15, 23, 42, 0.15);
+  }
+  .login-form .error {
+    color: #7f1d1d;
+    background: #fee2e2;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
