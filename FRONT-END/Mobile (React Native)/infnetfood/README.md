@@ -1,11 +1,28 @@
-# Sample Snack app
+# InfnetFood 🍔📍
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+App React Native (Expo) para pedidos e delivery.  
+Parte do **DR3 | Desenvolvimento Mobile com React Native (Infnet)**.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+## ✨ Funcionalidades
+- Login mock
+- Home com categorias (FlatList)
+- Produtos por categoria
+- Carrinho (estado local, sem Context)
+- Perfil (mock)
+- Pedidos (mock + pull-to-refresh)
+- Mapa simulado (10 restaurantes no Centro/RJ)
+- Detalhe do restaurante
+- Checkout (validação básica)
+- Autenticação simples (área pública/logada)
+- Feedback visual (Animated)
+- Notificações locais (Expo Notifications)
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+## 📦 Requisitos
+- Node + npm
+- Expo CLI / Expo Go
+- EAS CLI (para builds)
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
-
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+## ▶️ Rodando local
+```bash
+npm i
+npm run start  # ou: npx expo start
