@@ -1,0 +1,12 @@
+
+--- Execução ---
+Itens: 1603
+Bubble Sort:    0.079213 s
+Selection Sort: 0.027452 s
+Insertion Sort: 0.037917 s
+
+--- Execução ---
+Itens: 1603
+Bubble Sort:    0.080891 s
+Selection Sort: 0.028152 s
+Insertion Sort: 0.036949 s

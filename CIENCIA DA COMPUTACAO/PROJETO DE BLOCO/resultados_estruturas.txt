@@ -1,0 +1,48 @@
+
+--- INICIO ---
+Arquivo lido: listagem_arquivos.txt
+Total de itens: 1603
+Posições testadas: [1, 100, 1000, 1603]
+
+[HASHTABLE (dict)]
+Tempo armazenar: 0.000218 s
+Tempo recuperar posições: 0.000007 s
+Tempo adicionar item: 0.000001 s
+Tempo remover item: 0.000002 s
+Tempo total (soma): 0.000228 s
+
+Recuperados:
+  Posição 1: ./kdump/sysctl.conf
+  Posição 100: ./ufw/before.rules
+  Posição 1000: ./brltty/Keyboard/kp_speak.kti
+  Posição 1603: ./tmpfiles.d/screen-cleanup.conf
+Item removido (teste add/remove): arquivo_adicionado_hashtable.txt
+
+[PILHA (list)]
+Tempo armazenar: 0.000007 s
+Tempo recuperar posições: 0.000006 s
+Tempo adicionar item: 0.000005 s
+Tempo remover item: 0.000001 s
+Tempo total (soma): 0.000019 s
+
+Recuperados:
+  Posição 1: ./kdump/sysctl.conf
+  Posição 100: ./ufw/before.rules
+  Posição 1000: ./brltty/Keyboard/kp_speak.kti
+  Posição 1603: ./tmpfiles.d/screen-cleanup.conf
+Item removido (teste add/remove): arquivo_adicionado_pilha.txt
+
+[FILA (deque)]
+Tempo armazenar: 0.000022 s
+Tempo recuperar posições: 0.000020 s
+Tempo adicionar item: 0.000004 s
+Tempo remover item: 0.000002 s
+Tempo total (soma): 0.000048 s
+
+Recuperados:
+  Posição 1: ./kdump/sysctl.conf
+  Posição 100: ./ufw/before.rules
+  Posição 1000: ./brltty/Keyboard/kp_speak.kti
+  Posição 1603: ./tmpfiles.d/screen-cleanup.conf
+Item removido (teste add/remove): ./kdump/sysctl.conf
+
